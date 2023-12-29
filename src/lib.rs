@@ -48,12 +48,12 @@ pub mod nacl;
 pub mod sta;
 
 /// Converts SBI EID from str.
-const fn eid_from_str(name: &str) -> i32 {
+const fn eid_from_str(name: &str) -> u32 {
     match *name.as_bytes() {
-        [a] => i32::from_be_bytes([0, 0, 0, a]),
-        [a, b] => i32::from_be_bytes([0, 0, a, b]),
-        [a, b, c] => i32::from_be_bytes([0, a, b, c]),
-        [a, b, c, d] => i32::from_be_bytes([a, b, c, d]),
+        [a] => u32::from_be_bytes([0, 0, 0, a]),
+        [a, b] => u32::from_be_bytes([0, 0, a, b]),
+        [a, b, c] => u32::from_be_bytes([0, a, b, c]),
+        [a, b, c, d] => u32::from_be_bytes([a, b, c, d]),
         _ => unreachable!(),
     }
 }

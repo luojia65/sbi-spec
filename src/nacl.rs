@@ -1,7 +1,7 @@
 //! Chapter 15. Nested Acceleration Extension (EID #0x4E41434C "NACL").
 
 /// Extension ID for Nested Acceleration Extension.
-pub const EID_NACL: usize = crate::eid_from_str("NACL") as _;
+pub const EID_NACL: u32 = crate::eid_from_str("NACL");
 
 pub use fid::*;
 
